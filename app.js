@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const autoScroll = () => {
         const currentPercentage = parseFloat(track.dataset.percentage);
         nextPercentage = currentPercentage - 0.1 * scrollDirection;
-        console.log(nextPercentage)
 
         if (nextPercentage >= 0) {
             scrollDirection = 1;
@@ -54,6 +53,33 @@ document.addEventListener("DOMContentLoaded", function () {
     track.ondragstart = (e) => {
       e.preventDefault();
     };
+
+// Get the images
+const welcomeImg1 = document.querySelector('.welcome__img1');
+const welcomeImg2 = document.querySelector('.welcome__img2');
+
+// Function to update the image position based on the scroll
+function handleScroll() {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const yPercentage = (scrollTop * -0.05) % 100; // Adjust the multiplier (0.05) based on your preference
+  const xPercentage = (scrollTop * -0.05) % 100;
+
+  // Update the image positions
+  const newYPosition = `center ${100 + yPercentage}%`;
+  const newXPosition = `${100 + xPercentage}% center`;
+  welcomeImg1.animate({
+    objectPosition: newXPosition,
+  }, {duration: 1200, fill: 'forwards'})
+  welcomeImg2.animate({
+    objectPosition: newYPosition,
+  }, {duration: 1200, fill: 'forwards'})
+}
+
+
+// Add the scroll event listener
+window.addEventListener('scroll', handleScroll);
+
+
   
   
   $(document).ready(function () {

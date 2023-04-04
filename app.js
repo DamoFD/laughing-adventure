@@ -29,10 +29,15 @@ document.addEventListener("DOMContentLoaded", function () {
         const currentPercentage = parseFloat(track.dataset.percentage);
         nextPercentage = currentPercentage - 0.1 * scrollDirection;
 
+        const mobileBreakpoint = 768;
+        const mobilePercentage = -100;
+
         if (nextPercentage >= 0) {
             scrollDirection = 1;
-        } else if (nextPercentage <= -62) {
+        } else if (window.innerWidth <= mobileBreakpoint && nextPercentage <= mobilePercentage) {
             scrollDirection = -1;
+        } else if (window.innerWidth > mobileBreakpoint && nextPercentage <= -62 ) {
+          scrollDirection = -1;
         }
     
         track.dataset.percentage = nextPercentage;
@@ -79,6 +84,9 @@ function handleScroll() {
 // Add the scroll event listener
 window.addEventListener('scroll', handleScroll);
 
+document.getElementById("menuToggle").addEventListener("click", function () {
+  document.body.classList.toggle("disable-scroll");
+});
 
   
   

@@ -1,3 +1,11 @@
+@font-face { font-family: cinzel; 
+  src: url('./fonts/Cinzel-VariableFont_wght.ttf'); }
+
+@font-face {
+  font-family: roboto;
+  src: url(./fonts/Roboto-Regular.ttf);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,17 +16,19 @@ html {
     scroll-behavior: smooth;
 }
 
+p, h1, h2, h3, li {
+  font-family: roboto;
+}
+
 header {
   display: flex;
-  height: 8.1rem;
-  z-index: 3;
+  height: 50px;
+  z-index: 4;
   width: 100%;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
-  padding-left: 5%;
-  padding-right: 5%;
 }
 
 li,
@@ -27,11 +37,18 @@ ul {
   list-style: none;
 }
 
+.logo-link {
+  width: 100px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
 .logoHeader {
   height: 100%;
   padding-bottom: 1px;
   padding-top: 1px;
   cursor: pointer;
+  width: 100%;
 }
 
 .filterSVG__black {
@@ -97,15 +114,18 @@ video {
 }
 
 .title {
-  line-height: 120px;
+  line-height: 60px;
   position: relative;
-  font-size: 100px;
-  font-family: sans-serif;
+  font-size: 50px;
+  font-family: cinzel;
   font-weight: 200;
+  z-index: 3;
+}
+
+.title__main {
   color: white;
   margin-left: 20vw;
-  z-index: 3;
-  margin-top: 380px;
+  margin-top: 300px;
   letter-spacing: 5px;
 }
 
@@ -133,6 +153,12 @@ video {
   color: hsla(0, 0%, 100%, 0.65);
   display: block;
   font-size: 0.9rem;
+}
+
+#section05 {
+  position: relative;
+  left: 50%;
+  top: -100px;
 }
 
 #section05 a {
@@ -183,25 +209,20 @@ video {
 
 .welcome__section {
     background-image: url(https://discoverylandco.com/imager/images/287/background_imagev2_3580431e48aedf97dcedf972d1481942.jpg);
-    height: 100vh;
-    padding-top: 9rem;
+    height: 1000px;
     margin-top: 1px;
 }
 
 .welcomeImage__text {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    margin-left: 20vw;
-    margin-right: 10vw;
+    width: 100%;
+    padding: 20px;
 }
 
 .welcome__text {
-    width: 40%;
-}
-
-.welcome__title {
-    font-size: 100px;
-    line-height: 120px;
+    width: 100%;
 }
 
 .welcome__content {
@@ -211,42 +232,23 @@ video {
 }
 
 .welcome__img1 {
-    width: 50%;
-    height: 750px;
+    width: calc(100% - 90px);
+    height: 400px;
     object-fit: cover;
     object-position: center center;
-    margin-top: 30px;
+    margin-top: 40px;
+    margin-right: 20px;
+    align-self: flex-end;
 }
 
 .welcome__img2 {
-    width: 50%;
+    width: 75%;
     position: absolute;
     left: 10%;
-    margin-top: -310px;
-    height: 450px;
+    margin-top: -150px;
+    height: 150px;
     object-fit: cover;
     object-position: center bottom;
-}
-
-@keyframes up-and-down {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.animated {
-  animation: up-and-down 2s infinite;
-}
-
-.scroll-based {
-  will-change: transform;
-  transition: transform 0.1s ease-out;
 }
 
 .welcome__img1,
@@ -257,15 +259,11 @@ video {
 
 
 .explore__section {
-  padding-top: 15rem;
   overflow: hidden;
 }
 
-.explore__title {
-  margin-left: 10%;
-  font-size: 75px;
-  line-height: 90px;
-  margin-bottom: 100px;
+.explore__section .title {
+  margin: 20px;
 }
 
 #image-track {
@@ -284,8 +282,8 @@ video {
 }
 
 .image-track__image {
-  width: 40vmin;
-  height: 56vmin;
+  width: 60vmin;
+  height: 100vmin;
   object-fit: cover;
   object-position: 100% center;
   display: block;
@@ -295,8 +293,8 @@ video {
   position: absolute;
   top: 0;
   left: 0;
-  width: 40vmin;
-  height: 56vmin;
+  width: 60vmin;
+  height: 100vmin;
   background-color: rgba(0, 0, 0, 0.35);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
@@ -319,28 +317,20 @@ video {
 }
 
  .overlay h3 {
-  font-size: 50px;
+  font-size: 35px;
  }
 
  .overlay p {
-  font-size: 25px;
+  font-size: 20px;
  }
 
  .testimonial__section {
   background-image: url(https://discoverylandco.com/imager/images/287/background_imagev2_3580431e48aedf97dcedf972d1481942.jpg);
-  height: 100vh;
-  padding-top: 9rem;
-  margin-top: 1px;
-}
-
-.testimonial__title {
-  margin-left: 10%;
-  font-size: 75px;
-  line-height: 90px;
+  margin: 20px;
 }
 
 .testimonial__text {
-  margin-left: 10%;
+  font-size: 20px;
 }
 
 .gtco-testimonials {
@@ -443,7 +433,7 @@ video {
 
  .grid__bottom {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   width: 100%;
  }
 
@@ -461,7 +451,7 @@ video {
 
  .bottomGrid__img {
   width: 100%;
-  height: 100vh;
+  height: 500px;
   object-fit: cover;
   transition: transform 0.6s;
  }
@@ -491,20 +481,50 @@ video {
 }
 
 .glass-card > h3 {
-  font-size: 75px;
+  font-size: 35px;
 }
 
 .glass-card > p, a {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 footer {
   background-color: #161f1e;
 }
 
+.footer__items {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 .footer__logo {
   height: 100px;
   width: 100px;
+}
+
+.footer__menu {
+  font-size: 16px;
+  color: white;
+  margin-top: 20px;
+}
+
+.footer__menu a {
+  color: white;
+}
+
+.footer__menu li {
+  margin-top: 10px;
+}
+
+.footer__list2 {
+  margin-top: 20px;
+}
+
+.copyrights {
+  margin-top: 30px;
+  text-align: center;
+  color: white;
 }
 
 #mobile__nav {
@@ -514,6 +534,8 @@ footer {
 @media screen and (max-width: 768px) {
   #mobile__nav {
     display: flex;
+    position: fixed;
+    z-index: 10;
   }
 
   .nav__menu {
@@ -523,11 +545,11 @@ footer {
   #menuToggle
  {
    display: block;
-   position: relative;
-   top: 50px;
-   left: 50px;
+   position: fixed;
+   top: 20px;
+   right: 10%;
    
-   z-index: 3;
+   z-index: 10;
    
    -webkit-user-select: none;
    user-select: none;
@@ -539,6 +561,7 @@ footer {
    color: #232323;
    
    transition: color 0.3s ease;
+   z-index: 10;
  }
  
  #menuToggle a:hover
@@ -554,19 +577,16 @@ footer {
    height: 32px;
    position: absolute;
    top: -7px;
-   left: -5px;
+   right: 0;
    
    cursor: pointer;
    
-   opacity: 0; /* hide this */
-   z-index: 2; /* and place it over the hamburger */
+   opacity: 0;
+   z-index: 11;
    
    -webkit-touch-callout: none;
  }
- 
- /*
-  * Just a quick hamburger
-  */
+
  #menuToggle span
  {
    display: block;
@@ -578,7 +598,7 @@ footer {
    background: #cdcdcd;
    border-radius: 3px;
    
-   z-index: 1;
+   z-index: 10;
    
    transform-origin: 4px 0px;
    
@@ -596,55 +616,45 @@ footer {
  {
    transform-origin: 0% 100%;
  }
- 
- /* 
-  * Transform all the slices of hamburger
-  * into a crossmark.
-  */
+
  #menuToggle input:checked ~ span
  {
    opacity: 1;
    transform: rotate(45deg) translate(-2px, -1px);
    background: #232323;
  }
- 
- /*
-  * But let's hide the middle one.
-  */
+
  #menuToggle input:checked ~ span:nth-last-child(3)
  {
    opacity: 0;
    transform: rotate(0deg) scale(0.2, 0.2);
  }
- 
- /*
-  * Ohyeah and the last one should go the other direction
-  */
+
  #menuToggle input:checked ~ span:nth-last-child(2)
  {
    transform: rotate(-45deg) translate(0, -1px);
  }
- 
- /*
-  * Make this absolute positioned
-  * at the top left of the screen
-  */
+
  #menu
  {
-   position: absolute;
-   width: 300px;
-   margin: -100px 0 0 -50px;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   margin: 0;
    padding: 50px;
    padding-top: 125px;
    
-   background: #ededed;
+   background: rgba(255, 255, 255, 0.4);
+   backdrop-filter: blur(20px);
    list-style-type: none;
    -webkit-font-smoothing: antialiased;
-   /* to stop flickering of text in safari */
    
-   transform-origin: 0% 0%;
-   transform: translate(-100%, 0);
+   transform-origin: 100% 0%;
+   transform: translate(100%, 0);
    
+   z-index: 6;
    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
  }
  
@@ -653,12 +663,14 @@ footer {
    padding: 10px 0;
    font-size: 22px;
  }
- 
- /*
-  * And let's slide it in from the left
-  */
+
  #menuToggle input:checked ~ ul
  {
    transform: none;
  }
+}
+
+.disable-scroll {
+  overflow: hidden;
+  height: 100%;
 }

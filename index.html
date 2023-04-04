@@ -14,11 +14,10 @@
   </head>
   <body>
     <header id="main-header">
-      <a>
+      <a class="logo-link">
         <img
           id="logo"
           class="logoHeader"
-          style="width: 200px"
           src="./discoveryLogo.svg"
         />
       </a>
@@ -55,9 +54,9 @@
     <nav id='mobile__nav' role="navigation">
       <div id="menuToggle">
         <input type="checkbox" />
-        <span></span>
-        <span></span>
-        <span></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
         <ul id="menu">
           <a href="#"><li>Home</li></a>
           <a href="#"><li>About</li></a>
@@ -70,7 +69,7 @@
     <main class="main__page">
       <article>
         <section class="landing__section">
-          <h1 class="title">Discover<br />Your World</h1>
+          <h1 class="title title__main">Discover<br />Your<br /> World</h1>
           <div class="landing__cover">
             <video
               src="https://player.vimeo.com/progressive_redirect/playback/769653111/rendition/1080p/file.mp4?loc=external&amp;signature=ed68edc6f93d6322ab788f73a6c328d62ef27555627cc8b2c6a85fdaf8e4c696"
@@ -92,7 +91,7 @@
         <section class="welcome__section" id="welcome-section">
           <div class="welcomeImage__text">
             <div class="welcome__text">
-              <h2 class="welcome__title">Welcome to our world</h2>
+              <h2 class="title section__title">Welcome to our world</h2>
               <p class="welcome__content">
                 Discover the unique atmospheere of our private residential club
                 communities. Once experience. Never forgotten. This is classic,
@@ -117,7 +116,7 @@
           </figure>
         </section>
         <section class="explore__section" id="explore-section">
-          <h2 class="explore__title">Explore<br />our worlds</h2>
+          <h2 class="title section__title">Explore<br />our worlds</h2>
           <div
             id="image-track"
             data-mouse-down-at="0"
@@ -207,7 +206,7 @@
           </div>
         </section>
         <section class="testimonial__section">
-          <h2 class="testimonial__title">Lands of Discovery</h2>
+          <h2 class="title section__title">Lands of Discovery</h2>
           <p class="testimonial__text">
             Clients keep on coming back for more!<br />Explore great things.
           </p>
@@ -296,9 +295,10 @@
       </article>
     </main>
     <footer>
+      <div class="footer__items">
       <img src="./discoveryLogoFooter.svg" class="footer__logo" />
-      <nav>
-        <ul>
+      <nav class="footer__menu">
+        <ul class="footer__list1">
           <li>
             <p>Get in touch</p>
           </li>
@@ -315,7 +315,7 @@
             </p>
           </li>
         </ul>
-        <ul>
+        <ul class="footer__list2">
           <li>
             <p>
               <a>About DLC</a>
@@ -343,7 +343,8 @@
           </li>
         </ul>
       </nav>
-      <p>© Discovery Land Company. All rights reserved.</p>
+    </div>
+      <p class="copyrights">© Discovery Land Company. All rights reserved.</p>
     </footer>
     <script src="./app.js"></script>
     <script>
@@ -351,6 +352,7 @@
       const logo = document.getElementById("logo");
       const logoHeader = document.querySelector(".logoHeader");
       const menuItems = document.querySelectorAll(".nav-menu__item a");
+      const hamburger = document.querySelectorAll ('#menuToggle span')
 
       const changeHeaderOnScroll = () => {
         if (window.scrollY > window.innerHeight) {
@@ -359,12 +361,20 @@
           menuItems.forEach((item) => {
             item.style.color = "black";
           });
+
+          hamburger.forEach((span) => {
+            span.style.backgroundColor = 'black';
+          })
         } else {
           header.style.backgroundColor = "";
           logo.classList.remove("filterSVG__black");
           menuItems.forEach((item) => {
             item.style.color = "";
           });
+
+          hamburger.forEach((span) => {
+            span.style.backgroundColor = '#cdcdcd';
+          })
         }
       };
 

@@ -7,8 +7,14 @@
     <meta name="description" content="This is the meta description" />
     <title>Laughing Adventure</title>
     <link rel="stylesheet" type="text/css" href="./style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   </head>
@@ -19,6 +25,7 @@
           id="logo"
           class="logoHeader"
           src="./discoveryLogo.svg"
+          alt="discovery-logo"
         />
       </a>
       <nav class="nav__menu">
@@ -51,25 +58,43 @@
         </ul>
       </nav>
     </header>
-    <nav id='mobile__nav' role="navigation">
+    <nav id="mobile__nav" role="navigation">
       <div id="menuToggle">
-        <input type="checkbox" />
+        <input type="checkbox" aria-label="nav-menu" />
         <span class="burger-line"></span>
         <span class="burger-line"></span>
         <span class="burger-line"></span>
         <ul id="menu">
-          <a href="#"><li>Home</li></a>
-          <a href="#"><li>About</li></a>
-          <a href="#"><li>Info</li></a>
-          <a href="#"><li>Contact</li></a>
-          <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+          <li>
+            <p>
+              <a>Home</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a>About</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a>Info</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a>Contact</a>
+            </p>
+          </li>
         </ul>
       </div>
     </nav>
     <main class="main__page">
       <article>
         <section class="landing__section">
-          <h1 class="title title__main">Discover<br />Your<br /> World</h1>
+          <h1 class="title title__main">
+            Discover<br />Your<br />
+            World
+          </h1>
           <div class="landing__cover">
             <video
               src="https://player.vimeo.com/progressive_redirect/playback/769653111/rendition/1080p/file.mp4?loc=external&amp;signature=ed68edc6f93d6322ab788f73a6c328d62ef27555627cc8b2c6a85fdaf8e4c696"
@@ -78,11 +103,27 @@
               loop="true"
               autoplay="true"
               playsinline=""
-            ></video>
+            >
+              <track
+                src="discoveryVideoEn.vtt"
+                kind="captions"
+                srclang="en"
+                label="english_captions"
+              />
+              <track
+                src="discoveryVideoEs.vtt"
+                kind="captions"
+                srclang="es"
+                label="spanish_captions"
+              />
+            </video>
           </div>
           <div class="video__stats">
             <section id="section05" class="demo">
-              <a class="scroll__welcome" href="#welcome-section"
+              <a
+                class="scroll__welcome"
+                href="#welcome-section"
+                aria-label="This will scroll you down to our welcome section"
                 ><span></span
               ></a>
             </section>
@@ -105,6 +146,7 @@
               class="welcome__img1"
               src="https://images.unsplash.com/photo-1477468572316-36979010099d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80"
               alt="Yellowstone Club"
+              loading="lazy"
             />
           </div>
           <figure class="welcome__figure2">
@@ -112,6 +154,7 @@
               class="welcome__img2"
               src="https://images.unsplash.com/photo-1509233725247-49e657c54213?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=749&q=80"
               alt="beach"
+              loading="lazy"
             />
           </figure>
         </section>
@@ -125,6 +168,8 @@
           >
             <div class="image-container">
               <img
+                alt="beach"
+                loading="lazy"
                 draggable="false"
                 class="image-track__image"
                 src="https://images.unsplash.com/photo-1471922694854-ff1b63b20054?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80"
@@ -139,6 +184,8 @@
             </div>
             <div class="image-container">
               <img
+                alt="beach-vacation"
+                loading="lazy"
                 draggable="false"
                 class="image-track__image"
                 src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
@@ -150,6 +197,8 @@
             </div>
             <div class="image-container">
               <img
+                alt="La Quinta, California"
+                loading="lazy"
                 draggable="false"
                 class="image-track__image"
                 src="https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
@@ -161,6 +210,8 @@
             </div>
             <div class="image-container">
               <img
+                alt="La Quinta, California"
+                loading="lazy"
                 draggable="false"
                 class="image-track__image"
                 src="https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
@@ -172,6 +223,8 @@
             </div>
             <div class="image-container">
               <img
+                alt="Las Vegas, Nevada"
+                loading="lazy"
                 draggable="false"
                 class="image-track__image"
                 src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
@@ -183,6 +236,8 @@
             </div>
             <div class="image-container">
               <img
+                alt="Scottsdale, Arizona"
+                loading="lazy"
                 draggable="false"
                 class="image-track__image"
                 src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
@@ -194,6 +249,8 @@
             </div>
             <div class="image-container">
               <img
+                alt="Scottsdale, Arizona"
+                loading="lazy"
                 draggable="false"
                 class="image-track__image"
                 src="https://images.unsplash.com/photo-1596178060810-72f53ce9a65c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
@@ -211,81 +268,127 @@
             Clients keep on coming back for more!<br />Explore great things.
           </p>
           <div class="gtco-testimonials">
-        <div class="owl-carousel owl-carousel1 owl-theme">
-          <div>
-            <div class="card text-center"><img class="card-img-top" src="https://images.unsplash.com/photo-1572561300743-2dd367ed0c9a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=300" alt="">
-              <div class="card-body">
-                <h5>Ronne Galle <br />
-                  <span> Project Manager </span></h5>
-                <p class="card-text">“ Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
-                  impedit quo minus id quod maxime placeat ” </p>
+            <div class="owl-carousel owl-carousel1 owl-theme">
+              <div>
+                <div class="card text-center">
+                  <img
+                    loading="lazy"
+                    class="card-img-top"
+                    src="https://images.unsplash.com/photo-1572561300743-2dd367ed0c9a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=300"
+                    alt="Ronne Gall"
+                  />
+                  <div class="card-body">
+                    <h3>
+                      Ronne Galle <br />
+                      <span> Project Manager </span>
+                    </h3>
+                    <p class="card-text">
+                      “ Nam libero tempore, cum soluta nobis est eligendi optio
+                      cumque nihil impedit quo minus id quod maxime placeat ”
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card text-center">
+                  <img
+                    loading="lazy"
+                    class="card-img-top"
+                    src="https://images.unsplash.com/photo-1588361035994-295e21daa761?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=301"
+                    alt="Missy Limana"
+                  />
+                  <div class="card-body">
+                    <h3>
+                      Missy Limana<br />
+                      <span> Engineer </span>
+                    </h3>
+                    <p class="card-text">
+                      “ Nam libero tempore, cum soluta nobis est eligendi optio
+                      cumque nihil impedit quo minus id quod maxime placeat ”
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card text-center">
+                  <img
+                    loading="lazy"
+                    class="card-img-top"
+                    src="https://images.unsplash.com/photo-1575377222312-dd1a63a51638?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=302&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=302"
+                    alt="Martha Brown"
+                  />
+                  <div class="card-body">
+                    <h3>
+                      Martha Brown<br />
+                      <span> Project Manager </span>
+                    </h3>
+                    <p class="card-text">
+                      “ Nam libero tempore, cum soluta nobis est eligendi optio
+                      cumque nihil impedit quo minus id quod maxime placeat ”
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card text-center">
+                  <img
+                    loading="lazy"
+                    class="card-img-top"
+                    src="https://images.unsplash.com/photo-1549836938-d278c5d46d20?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=303&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=303"
+                    alt="Hanna Lisem"
+                  />
+                  <div class="card-body">
+                    <h3>
+                      Hanna Lisem<br />
+                      <span> Project Manager </span>
+                    </h3>
+                    <p class="card-text">
+                      “ Nam libero tempore, cum soluta nobis est eligendi optio
+                      cumque nihil impedit quo minus id quod maxime placeat ”
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div>
-            <div class="card text-center"><img class="card-img-top" src="https://images.unsplash.com/photo-1588361035994-295e21daa761?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=301" alt="">
-              <div class="card-body">
-                <h5>Missy Limana<br />
-                  <span> Engineer </span></h5>
-                <p class="card-text">“ Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
-                  impedit quo minus id quod maxime placeat ” </p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="card text-center"><img class="card-img-top" src="https://images.unsplash.com/photo-1575377222312-dd1a63a51638?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=302&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=302" alt="">
-              <div class="card-body">
-                <h5>Martha Brown<br />
-                  <span> Project Manager </span></h5>
-                <p class="card-text">“ Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
-                  impedit quo minus id quod maxime placeat ” </p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="card text-center"><img class="card-img-top" src="https://images.unsplash.com/photo-1549836938-d278c5d46d20?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=303&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=303" alt="">
-              <div class="card-body">
-                <h5>Hanna Lisem<br />
-                  <span> Project Manager </span></h5>
-                <p class="card-text">“ Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
-                  impedit quo minus id quod maxime placeat ” </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
         </section>
         <section>
           <div class="grid__bottom">
             <div class="bottomGrid__section1 bottomGrid__section">
               <div class="glass-card">
-                <h3>Experiences</h3>
+                <h2>Experiences</h2>
                 <p>Experience description...</p>
                 <a href="">Learn more</a>
               </div>
               <img
+                alt="Experiences"
+                loading="lazy"
                 class="bottomGrid__img"
                 src="https://discoverylandco.com/imager/images/11020/amazing-pool-2_fc98236fcd7afd38ca0fd181cf61bcb6.jpg"
               />
             </div>
             <div class="bottomGrid__section2 bottomGrid__section">
               <div class="glass-card">
-                <h3>Lifestyle</h3>
+                <h2>Lifestyle</h2>
                 <p>LifeStyle description...</p>
                 <a href="">Learn more</a>
               </div>
               <img
+                alt="lifestyle"
+                loading="lazy"
                 class="bottomGrid__img"
                 src="https://discoverylandco.com/imager/images/729/lifestyle_slider_190716_095537_fc98236fcd7afd38ca0fd181cf61bcb6.jpg"
               />
             </div>
             <div class="bottomGrid__section3 bottomGrid__section">
               <div class="glass-card">
-                <h3>Wellness</h3>
+                <h2>Wellness</h2>
                 <p>Wellness description...</p>
                 <a href="">Learn more</a>
               </div>
               <img
+                alt="wellness"
+                loading="lazy"
                 class="bottomGrid__img"
                 src="https://discoverylandco.com/imager/images/730/wellness_slider_190716_095551_90f8ce634cc6ad7a15d605007f03ee5c.jpg"
               />
@@ -296,54 +399,59 @@
     </main>
     <footer>
       <div class="footer__items">
-      <img src="./discoveryLogoFooter.svg" class="footer__logo" />
-      <nav class="footer__menu">
-        <ul class="footer__list1">
-          <li>
-            <p>Get in touch</p>
-          </li>
-          <li>
-            <p>
-              <a href="tel:(480) 624-4800">(480) 624-4800</a>
-            </p>
-          </li>
-          <li>
-            <p>
-              <a href="mailto:mail@discoverylandco.com"
-                >mail@discoverylandco.com</a
-              >
-            </p>
-          </li>
-        </ul>
-        <ul class="footer__list2">
-          <li>
-            <p>
-              <a>About DLC</a>
-            </p>
-          </li>
-          <li>
-            <p>
-              <a>Our Worlds</a>
-            </p>
-          </li>
-          <li>
-            <p>
-              <a>Experiences</a>
-            </p>
-          </li>
-          <li>
-            <p>
-              <a>Gallery</a>
-            </p>
-          </li>
-          <li>
-            <p>
-              <a>Press</a>
-            </p>
-          </li>
-        </ul>
-      </nav>
-    </div>
+        <img
+          loading="lazy"
+          src="./discoveryLogoFooter.svg"
+          class="footer__logo"
+          alt="footer discovery logo"
+        />
+        <nav class="footer__menu">
+          <ul class="footer__list1">
+            <li>
+              <p>Get in touch</p>
+            </li>
+            <li>
+              <p>
+                <a href="tel:(480) 624-4800">(480) 624-4800</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="mailto:mail@discoverylandco.com"
+                  >mail@discoverylandco.com</a
+                >
+              </p>
+            </li>
+          </ul>
+          <ul class="footer__list2">
+            <li>
+              <p>
+                <a>About DLC</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a>Our Worlds</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a>Experiences</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a>Gallery</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a>Press</a>
+              </p>
+            </li>
+          </ul>
+        </nav>
+      </div>
       <p class="copyrights">© Discovery Land Company. All rights reserved.</p>
     </footer>
     <script src="./app.js"></script>
@@ -352,7 +460,7 @@
       const logo = document.getElementById("logo");
       const logoHeader = document.querySelector(".logoHeader");
       const menuItems = document.querySelectorAll(".nav-menu__item a");
-      const hamburger = document.querySelectorAll ('#menuToggle span')
+      const hamburger = document.querySelectorAll("#menuToggle span");
 
       const changeHeaderOnScroll = () => {
         if (window.scrollY > window.innerHeight) {
@@ -363,8 +471,8 @@
           });
 
           hamburger.forEach((span) => {
-            span.style.backgroundColor = 'black';
-          })
+            span.style.backgroundColor = "black";
+          });
         } else {
           header.style.backgroundColor = "";
           logo.classList.remove("filterSVG__black");
@@ -373,12 +481,14 @@
           });
 
           hamburger.forEach((span) => {
-            span.style.backgroundColor = '#cdcdcd';
-          })
+            span.style.backgroundColor = "#cdcdcd";
+          });
         }
       };
 
-      window.addEventListener("scroll", changeHeaderOnScroll);
+      window.addEventListener("scroll", changeHeaderOnScroll, {
+        passive: true,
+      });
     </script>
   </body>
 </html>

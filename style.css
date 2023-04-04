@@ -132,7 +132,7 @@ video {
 
 .title__main {
   color: white;
-  margin-left: 20vw;
+  margin-left: 20px;
   margin-top: 300px;
   letter-spacing: 5px;
 }
@@ -669,4 +669,111 @@ footer {
 .disable-scroll {
   overflow: hidden;
   height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    height: 75px;
+  }
+
+  .logo-link {
+    width: 250px;
+  }
+
+  .title {
+    line-height: 120px;
+    font-size: 100px;
+  }
+
+  .title__main {
+    margin-left: 27%;
+    margin-top: 17%;
+  }
+
+  .welcomeImage__text {
+    padding: 100px;
+    flex-direction: row;
+  }
+
+  .welcome__text {
+    width: 50%;
+  }
+
+  .welcome__img1 {
+    width: 50%;
+    height: 1000px;
+  }
+
+  .welcome__img2 {
+    width: 1100px;
+    left: 100px;
+    margin-top: -600px;
+    height: 550px;
+    object-fit: cover;
+    object-position: center bottom;
+  }
+
+  .explore__section {
+    margin-top: 300px;
+  }
+
+  .explore__section .title {
+    margin-left: 100px;
+  }
+  
+  .image-track__image {
+    width: 40vmin;
+    height: 56vmin;
+  }
+  
+  .overlay {
+    width: 40vmin;
+    height: 56vmin;
+  }
+  
+  .overlay h3 {
+    font-size: 50px;
+  }
+  
+  .overlay p {
+    font-size: 25px;
+  }
+
+  .testimonial__section {
+    height: 800px;
+    padding: 100px;
+    padding-right: 110px;
+    margin: 0;
+  }
+
+  .gtco-testimonials {
+    margin-top: 40px;
+  }
+
+  .grid__bottom {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: none;
+  }
+
+  .bottomGrid__img {
+    height: 100vh;
+  }
+
+  .glass-card > h2 {
+    font-size: 75px;
+  }
+  
+  .glass-card > p,
+  a {
+    font-size: 30px;
+  }
+
+  .footer__menu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer__menu ul li {
+    margin: 20px;
+  }
 }
